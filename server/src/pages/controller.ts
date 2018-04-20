@@ -2,6 +2,7 @@ import { JsonController, Get, Param,Post,HttpCode,Body,NotFoundError,Put } from 
 import Product from './entity'
 
 type ProductsList = { products: Product[] }
+
 @JsonController()
 export default class ProductController {
    

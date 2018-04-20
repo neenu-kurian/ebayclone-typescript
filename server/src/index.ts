@@ -3,9 +3,11 @@ import {createKoaServer} from "routing-controllers"
 import PageController from "./pages/controller"
 import setupDb from './db'
 
+
 const port = process.env.PORT || 4000
 
 const app = createKoaServer({
+   cors:true,
    controllers: [PageController]
 })
 
