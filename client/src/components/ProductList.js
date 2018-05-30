@@ -7,7 +7,7 @@ import Card, {CardActions, CardContent} from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import Button from 'material-ui/Button'
 import Paper from 'material-ui/Paper'
-import './ProductList.css'
+import '../css/ProductList.css'
 
 class ProductList extends PureComponent {
 
@@ -24,7 +24,7 @@ class ProductList extends PureComponent {
   {
     return (
 
-      <Card key={eachproduct.id} className="center-card">
+      <Card key={eachproduct.id} className="product-card">
         <CardContent>
         <Typography component="h1">
             <img src= {eachproduct.picture} style={{maxHeight: '100px'}} alt='product'/>

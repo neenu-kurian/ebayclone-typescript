@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  
+
 }
 
 .App-logo {
@@ -25,4 +26,23 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.ebay{
+
+  max-height: 300px;
+  display: block;
+  margin: auto;
+  
+}
+
+.enjoy-shopping{
+
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  padding-bottom: 100px;
+  color:blueviolet;
+  font-style: italic;
+  
 }
