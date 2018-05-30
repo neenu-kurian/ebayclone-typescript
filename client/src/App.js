@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div>
         <img style={{maxHeight:'300px'}} alt='ṕroductimage'src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/EBay_former_logo.svg/2000px-EBay_former_logo.svg.png' />
-        
+       
       <Router>
         <div>
         <Route exact path="/products" component={ProductList} />
