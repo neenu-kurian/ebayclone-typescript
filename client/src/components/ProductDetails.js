@@ -44,8 +44,7 @@ class ProductDetails extends PureComponent{
 
 const mapStateToProps = function (state,props) {
 
-    
-    return {
+   return {
       product: state.Productdetail
     }
   }

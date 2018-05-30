@@ -15,8 +15,10 @@ class ProductList extends PureComponent{
  
     render(){
       
-      const { productList } = this.props
-      console.log(productList)
+      const productsList = this.props.productList
+
+      console.log("productlist",productsList)
+
       return(
           <div>
           <h1>Product List</h1>
@@ -30,7 +32,7 @@ class ProductList extends PureComponent{
                 </tr>
           </thead>
           <tbody>
-                {productList.map(product =>(<tr key={product.id} >
+                {productsList.map(product =>(<tr key={product.id} >
                   <td className="productid">{product.id}</td>
                   <td className="producttitle">{product.title}</td>
                   <td className="productprice">{product.price}</td>
@@ -47,9 +49,8 @@ class ProductList extends PureComponent{
 }
 
 const mapstatetoprops=function(state){
-    console.log("iniside mapstatetoprops")
     return{
-        productList: state.productlistreducer
+        productList: state.productList
        
     }
     

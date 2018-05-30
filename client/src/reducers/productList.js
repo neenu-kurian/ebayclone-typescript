@@ -6,8 +6,6 @@ const initialState=[
 ]
 
 export default function (state = initialState, action) {
-
-    console.log('inside productlistreducer')
     switch (action.type) {
         case VIEW_PRODUCT_LIST:
            return action.payload

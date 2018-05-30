@@ -1,9 +1,9 @@
 import Productdetail from './Productdetail'
-import productlistreducer from './productlistreducer'
+import productList from './productList'
 
 
 export default {
     Productdetail,
-    productlistreducer
+    productList
    
 }
