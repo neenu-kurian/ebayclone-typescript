@@ -1,4 +1,4 @@
 # ebayclone-typescript
 
 
-**in progress
+**In progress**
