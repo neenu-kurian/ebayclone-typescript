@@ -62,6 +62,7 @@ class ProductList extends PureComponent {
 
     return (
      <div>
+      <p className='enjoy-shopping'> Enjoy Shopping !!!! </p>
       <Link to ={`/newproduct`}><Button variant='raised' color='primary' className={classes.button}> Add New Product </Button><br/></Link>
       <Paper className="outer-paper">
         {productsList.map((product,index) => 

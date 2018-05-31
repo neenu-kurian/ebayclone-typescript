@@ -12,7 +12,7 @@ class App extends Component {
       <div className='App'>
         <img className='ebay'  alt='ebayimage'src='https://sendgrid.com/wp-content/uploads/2017/05/2000px-EBay_logo.svg.png' />
       <br/>
-      <p className='enjoy-shopping'> Enjoy Shopping !!!! </p>
+     
       <Router>
         <div>
         <Route exact path="/products" component={ProductList} />

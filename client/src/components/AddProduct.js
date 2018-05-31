@@ -34,7 +34,7 @@ render(){
     return(
         <form onSubmit={this.handleSubmit}>
         <Paper className='outer-paper-addproduct'>
-        <h1 className='add-new'>Add new Product </h1>
+        <h1 className='add-new'>Add New Product </h1>
         
         <div>
             <label className='addproductlabel' htmlFor="Product">Product Name</label>
@@ -74,8 +74,8 @@ render(){
         </div>
        <br />
        
-       <button type="submit">Save</button><br/><br/>
-       <Link to={`/products`} ><button >All Products</button></Link>
+       <button type="submit" className='save-button'>Save</button><br/><br/>
+       <Link to={`/products`} ><button  className='allproducts-button' >All Products</button></Link>
 
         </Paper>
         </form>

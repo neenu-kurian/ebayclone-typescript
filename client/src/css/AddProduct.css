@@ -8,6 +8,7 @@
 .add-new{
     text-align: center;
     color:blue;
+    padding-top: 20px;
 }
 
 .outer-paper-addproduct{
@@ -21,3 +22,33 @@
     width:25em;
     margin-right: 500px;
 }
+
+.save-button{
+
+ display:inline-block;
+ padding:0.3em 1.2em;
+ margin:0 0.1em 0.1em 0;
+ background-color:rgb(132, 103, 161);
+ color: white;
+ box-sizing: border-box;
+ border-radius: 2em;
+ width:100px;
+ height: 50px;
+ margin-left:450px
+}
+
+.allproducts-button{
+
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    background-color:rgb(132, 103, 161);
+    color: white;
+    box-sizing: border-box;
+    border-radius: 2em;
+    width:150px;
+    height: 50px;
+    margin-left:430px;
+    margin-top:20px;
+    margin-bottom: 50px;
+   }
