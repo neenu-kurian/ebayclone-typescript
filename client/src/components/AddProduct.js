@@ -3,6 +3,9 @@ import {createProduct} from '../actions/productlist'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
+import '../css/AddProduct.css'
+import Paper from 'material-ui/Paper'
+
 class AddProduct extends PureComponent{
     constructor(){
         super()
@@ -30,51 +33,51 @@ render(){
 
     return(
         <form onSubmit={this.handleSubmit}>
-        <div>
-        <h1>Add new Product </h1>
+        <Paper className='outer-paper-addproduct'>
+        <h1 className='add-new'>Add new Product </h1>
         
         <div>
-            <label htmlFor="Product">Product Name</label>
-            <input name="title" id="Product" value={
+            <label className='addproductlabel' htmlFor="Product">Product Name</label>
+            <input className='addproductinput' name="title" id="Product" value={
                 this.state.name
             }onChange={this.handleChange} />
         </div>
         <div>
-            <label htmlFor="Description">Description</label>
-            <input name="description" id="Description" value={
+            <label className='addproductlabel' htmlFor="Description">Description</label>
+            <input className='addproductinput' name="description" id="Description" value={
                 this.state.name
             }onChange={this.handleChange} />
         </div>
         <div>
-            <label htmlFor="Picture">Picture</label>
-            <input name="picture" id="Picture" value={
+            <label className='addproductlabel' htmlFor="Picture">Picture</label>
+            <input className='addproductinput' name="picture" id="Picture" value={
                 this.state.name
             }onChange={this.handleChange} />
         </div>
         <div>
-            <label htmlFor="Price">Price</label>
-            <input name="price" id="Price" value={
+            <label className='addproductlabel' htmlFor="Price">Price</label>
+            <input className='addproductinput' name="price" id="Price" value={
                 this.state.name
             }onChange={this.handleChange} />
         </div>
         <div>
-            <label htmlFor="Emailaddress">Email Address</label>
-            <input name="email" id="Emailaddress" value={
+            <label className='addproductlabel' htmlFor="Emailaddress">Email Address</label>
+            <input className='addproductinput' name="email" id="Emailaddress" value={
                 this.state.name
             }onChange={this.handleChange} />
         </div>
         <div>
-            <label htmlFor="PhoneNumber">Phone Number</label>
-            <input name="phoneno" id="PhoneNumber" value={
+            <label className='addproductlabel' htmlFor="PhoneNumber">Phone Number</label>
+            <input className='addproductinput' name="phoneno" id="PhoneNumber" value={
                 this.state.name
             }onChange={this.handleChange} />
         </div>
        <br />
        
-       <button type="submit">Save</button><br/>
+       <button type="submit">Save</button><br/><br/>
        <Link to={`/products`} ><button >All Products</button></Link>
 
-        </div>
+        </Paper>
         </form>
     )
 }

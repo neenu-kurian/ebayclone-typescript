@@ -1,0 +1,23 @@
+.addproductlabel{
+    width: 10em; 
+    margin-right: 10px;
+    margin-left:150px;
+    
+}
+
+.add-new{
+    text-align: center;
+    color:blue;
+}
+
+.outer-paper-addproduct{
+  width:1000px;
+  margin-left:500px;
+}
+
+.addproductinput{
+   
+    margin-left: 400px;
+    width:25em;
+    margin-right: 500px;
+}

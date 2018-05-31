@@ -10,17 +10,16 @@ import {Table,TableHeader,TableHeaderColumn,TableRow,TableRowColumn,TableBody} f
 
 class ProductDetails extends PureComponent{
 
-    componentWillMount() {
-        this.props.fetchProduct(this.props.match.params.id)
-      }
+   
 
      render(){
 
         return(
+          
            <div>
            <h1 className='product-details-text'>Product Details</h1>
             
-           {/*<Table>
+         {/*}  <Table>
                
             <TableHeader>
               <TableRow>
@@ -34,20 +33,22 @@ class ProductDetails extends PureComponent{
              
             </TableHeader>
                 <TableBody>
-                 <TableRow key={product.id} >
-                  <TableRowColumn>{product.description}</TableRowColumn>
-                  <TableRowColumn><img className='image-product' alt='product' src={product.picture}/></TableRowColumn>
-                  <TableRowColumn>{product.price}</TableRowColumn>
-                  <TableRowColumn>{product.email}</TableRowColumn>
-                  <TableRowColumn>{product.phoneno}</TableRowColumn>
+                 <TableRow key={this.props.product.id} >
+                  <TableRowColumn>{this.props.product.description}</TableRowColumn>
+                  <TableRowColumn><img className='image-product' alt='product' src={this.props.product.picture}/></TableRowColumn>
+                  <TableRowColumn>{this.props.product.price}</TableRowColumn>
+                  <TableRowColumn>{this.props.product.email}</TableRowColumn>
+                  <TableRowColumn>{this.props.product.phoneno}</TableRowColumn>
                  </TableRow>
                  
                 </TableBody>
-           </Table>*/}
+        </Table>*/}
+
+        
 
         <Link to ={`/products`}><Button className='seeallproducts'> See all products </Button></Link>
         </div>
-
+          
        
         )
     }

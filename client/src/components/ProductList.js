@@ -4,11 +4,21 @@ import {fetchAllProducts} from '../actions/productlist'
 import {Link} from 'react-router-dom'
 
 //Styling
-import Card, {CardActions, CardContent} from 'material-ui/Card'
+import { withStyles } from 'material-ui/styles';
+import Card, {CardContent} from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import Button from 'material-ui/Button'
 import Paper from 'material-ui/Paper'
 import '../css/ProductList.css'
+
+
+
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit,
+   
+  }
+});
 
 class ProductList extends PureComponent {
 
@@ -46,18 +56,19 @@ class ProductList extends PureComponent {
 
   
   render() {
-
+    
+    const {classes}=this.props;
     const productsList = this.props.productList
 
     return (
      <div>
-      <Link to ={`/newproduct`}><Button> Add New Product </Button><br/></Link>
+      <Link to ={`/newproduct`}><Button variant='raised' color='primary' className={classes.button}> Add New Product </Button><br/></Link>
       <Paper className="outer-paper">
-        {productsList.map((product => 
-
+        {productsList.map((product,index) => 
+           
           this.renderProduct(product)
-
-        ))}
+           
+        )}
       </Paper>
 </div>
 
@@ -72,4 +83,4 @@ const mapstatetoprops = function (state) {
 
 }
 
-export default connect(mapstatetoprops, {fetchAllProducts})(ProductList)
+export default  withStyles(styles)(connect(mapstatetoprops, {fetchAllProducts})(ProductList))
