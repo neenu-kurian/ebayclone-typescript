@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react'
 import {createProduct} from '../actions/productlist'
+import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
 class AddProduct extends PureComponent{
@@ -70,7 +71,9 @@ render(){
         </div>
        <br />
        
-       <button type="submit">Save</button>
+       <button type="submit">Save</button><br/>
+       <Link to={`/products`} ><button >All Products</button></Link>
+
         </div>
         </form>
     )
