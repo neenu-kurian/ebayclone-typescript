@@ -1,0 +1,57 @@
+.producttitle{
+
+    padding:10px;
+    width:100px;
+    font-size:30px
+
+}
+
+.productid{
+    padding:10px;
+    width:100px;
+    font-size:30px
+}
+
+.productprice{
+    padding:10px;
+    width:100px;
+    font-size:30px 
+}
+
+.headerid{
+
+    padding:10px;
+    width:100px;
+    font-size:30px;
+    color:rgb(109, 201, 163);
+
+}
+
+.headertitle{
+    padding:10px;
+    width:100px;
+    font-size:30px;
+    color:rgb(109, 201, 163);
+
+}
+
+.headerprice{
+    padding:10px;
+    width:100px;
+    font-size:30px ;
+    color:rgb(109, 201, 163);
+
+}
+
+.product-card{
+    display:inline-flex;
+    width:300px;
+    margin: 30px;
+}
+
+.outer-paper{
+    padding: 10px;
+    margin: auto;
+    width: 70%;
+
+}
