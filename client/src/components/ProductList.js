@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
 import {fetchAllProducts} from '../actions/productlist'
+import {Link} from 'react-router-dom'
 
 //Styling
 import Card, {CardActions, CardContent} from 'material-ui/Card'
@@ -24,10 +25,10 @@ class ProductList extends PureComponent {
   {
     return (
 
-      <Card key={eachproduct.id} className="product-card">
+      <Link to ={`/products/${eachproduct.id}`} ><Card key={eachproduct.id}  className="product-card">
         <CardContent>
         <Typography component="h1">
-            <img src= {eachproduct.picture} style={{maxHeight: '100px'}} alt='product'/>
+            <img src= {eachproduct.picture} style={{maxHeight: '100px', width:'200px'}} alt='product'/>
           </Typography>
           <Typography component="h1">
             {eachproduct.title}
@@ -38,7 +39,7 @@ class ProductList extends PureComponent {
           </Typography>
         </CardContent>
 
-      </Card>
+      </Card></Link>
     )
 
   }
@@ -48,9 +49,9 @@ class ProductList extends PureComponent {
 
     const productsList = this.props.productList
 
-    console.log("productlist", productsList)
-
     return (
+     <div>
+      <Link to ={`/newproduct`}><Button> Add New Product </Button><br/></Link>
       <Paper className="outer-paper">
         {productsList.map((product => 
 
@@ -58,6 +59,8 @@ class ProductList extends PureComponent {
 
         ))}
       </Paper>
+</div>
+
     )
   }
 }

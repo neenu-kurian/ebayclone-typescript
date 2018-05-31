@@ -1,14 +1,18 @@
 import React, {PureComponent} from 'react'
+import {createProduct} from '../actions/productlist'
+import {connect} from 'react-redux'
 
-export default class AddProduct extends PureComponent{
+class AddProduct extends PureComponent{
     constructor(){
         super()
         this.state={}
     }
 
      handleSubmit = (e) => {
+       
+        console.log(this.state)
 		e.preventDefault()
-		this.props.onSubmit(this.state)
+		this.props.createProduct(this.state)
     }
     
     handleChange = (event) => {
@@ -30,38 +34,38 @@ render(){
         
         <div>
             <label htmlFor="Product">Product Name</label>
-            <input name="Product" id="Product" value={
-                this.state.name||''
+            <input name="title" id="Product" value={
+                this.state.name
             }onChange={this.handleChange} />
         </div>
         <div>
             <label htmlFor="Description">Description</label>
-            <input name="Description" id="Description" value={
-                this.state.name||""
+            <input name="description" id="Description" value={
+                this.state.name
             }onChange={this.handleChange} />
         </div>
         <div>
             <label htmlFor="Picture">Picture</label>
-            <input name="Picture" id="Picture" value={
-                this.state.name||""
+            <input name="picture" id="Picture" value={
+                this.state.name
             }onChange={this.handleChange} />
         </div>
         <div>
             <label htmlFor="Price">Price</label>
-            <input name="Price" id="Price" value={
-                this.state.name||""
+            <input name="price" id="Price" value={
+                this.state.name
             }onChange={this.handleChange} />
         </div>
         <div>
             <label htmlFor="Emailaddress">Email Address</label>
-            <input name="Emailaddress" id="Emailaddress" value={
-                this.state.name||""
+            <input name="email" id="Emailaddress" value={
+                this.state.name
             }onChange={this.handleChange} />
         </div>
         <div>
             <label htmlFor="PhoneNumber">Phone Number</label>
-            <input name="PhoneNumber" id="PhoneNumber" value={
-                this.state.name||""
+            <input name="phoneno" id="PhoneNumber" value={
+                this.state.name
             }onChange={this.handleChange} />
         </div>
        <br />
@@ -73,3 +77,5 @@ render(){
 }
 
 }
+
+export default connect(null,{createProduct})(AddProduct)

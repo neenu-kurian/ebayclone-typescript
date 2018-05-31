@@ -29,13 +29,13 @@ export default class ProductController {
     return Product.merge(product, update).save()
     }
 
-   @Post('/products')
-   @HttpCode(201)
-   createProduct(
-   @Body() product: Product
-   ) {
-  return product.save()
-  }
-    
+
+    @Post('/newproduct')
+    @HttpCode(201)
+    async createProduct(@Body()product : Product) {
+    const entity = await product.save()
+    return entity
+
+    }
 }
 

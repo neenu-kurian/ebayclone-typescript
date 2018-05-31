@@ -1,4 +1,5 @@
 import {VIEW_PRODUCT_DETAILS} from './types'
+import {NEW_PRODUCT} from './types'
 import * as request from 'superagent'
 const baseUrl = 'http://localhost:4000'
 
@@ -13,3 +14,4 @@ export const fetchProduct=(productID)=>(dispatch)=>{
     })})
     .catch(err=>alert(err))
 }
+

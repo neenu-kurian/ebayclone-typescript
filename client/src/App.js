@@ -3,6 +3,7 @@ import './App.css';
 import ProductDetails from './components/ProductDetails'
 import ProductList from './components/ProductList'
 import { BrowserRouter as Router, Route,Redirect} from "react-router-dom"
+import AddProduct from './components/AddProduct';
 
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
         <br />
         
         <Route exact path="/products/:id" component={ProductDetails} />
+        <Route exact path="/newproduct" component={AddProduct}/>
         <Route exact path="/" render={ () => <Redirect to="/products" /> } /> 
       </div>
     </Router>
